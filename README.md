@@ -13,6 +13,15 @@ Este repositório contém **templates genéricos** para provisionamento de telef
 └─ .gitignore
 ```
 
+### Transporte SIP (IMPORTANTE para 7911G)
+- `{{TRANSPORT_LAYER_PROTOCOL}}`
+  - `1` = TCP  ← **Use isto para Cisco 7911G**
+  - `2` = UDP
+  - `3` = TLS
+
+O modelo **Cisco 7911G só registrou no Asterisk usando TCP**.  
+Portanto, ajuste `transport=tcp` no Asterisk e configure `transportLayerProtocol` como `1`.
+
 ## Como usar
 1. Copie o modelo correspondente ao seu aparelho (78xx ou 79xx) para um novo arquivo nomeado como `SEP<MAC>.cnf.xml`.
 2. Substitua todos os **placeholders** `{{...}}` pelos valores do seu ambiente:
