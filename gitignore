@@ -1,0 +1,16 @@
+
+# Ignorar arquivos de provisionamento reais
+SEP*.cnf.xml
+*.bak
+*.tmp
+*.secret
+
+# Sistema
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+
+# Somente manter os templates
+!TEMPLATE_*.cnf.xml
